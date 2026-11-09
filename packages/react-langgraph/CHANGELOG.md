@@ -1,5 +1,14 @@
 # @assistant-ui/react-langgraph
 
+## 0.14.40
+
+### Patch Changes
+
+- [#10300](https://github.com/assistant-ui/assistant-ui/pull/10300) [`45e7b34`](https://github.com/assistant-ui/assistant-ui/commit/45e7b34f0fd632f9bd5e857fe40bcad2a50c1a17) - leave the tool calls a paused LangGraph interrupt holds to the graph, and run them once the graph resumes and hands them back. in core, `unstable_isClientToolCall` may return `undefined` for a call an adapter can't classify, and a `false` answer on a settled snapshot now holds the call (no skip, no warning) and asks again on every later settled snapshot instead of skipping it for good. a `false` on a running snapshot still marks the call provider-owned. fixes [#10295](https://github.com/assistant-ui/assistant-ui/issues/10295). ([@lhy-dcf](https://github.com/lhy-dcf))
+- Updated dependencies [[`45e7b34`](https://github.com/assistant-ui/assistant-ui/commit/45e7b34f0fd632f9bd5e857fe40bcad2a50c1a17), [`9755dbd`](https://github.com/assistant-ui/assistant-ui/commit/9755dbdd77b81aa5d7deca0b0cca6264b85f5de4), [`27d4bb8`](https://github.com/assistant-ui/assistant-ui/commit/27d4bb82926072f80b72169548fdebf47f96e357), [`f0c5845`](https://github.com/assistant-ui/assistant-ui/commit/f0c584556f637203386830e8648e5a5231ca8340)]:
+  - @assistant-ui/core@0.3.34
+  - assistant-stream@0.3.57
+
 ## 0.14.39
 
 ### Patch Changes
